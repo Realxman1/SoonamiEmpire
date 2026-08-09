@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <title>Soonami Garage</title>
+ <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+ <style>
+ :root {
+ --gold-accent: #d4af37;
+ --gold-glow: rgba(212, 175, 55, 0.6);
+ --text-primary: #f3e5ab;
+ --text-secondary: #b8a99a;
+ }
+
+ body {
+ margin: 0;
+ padding: 0;
+ font-family: 'Outfit', sans-serif;
+ background: linear-gradient(135deg, #121418 0%, #1a1d24 50%, #222630 100%);
+ color: var(--text-primary);
+ min-height: 100vh;
+ }
+
+ nav {
+ padding: 20px;
+ display: flex;
+ justify-content: center;
+ background: rgba(18, 20, 24, 0.95);
+ position: fixed;
+ width: 100%;
+ top: 0;
+ z-index: 100;
+ border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+ }
+
+ nav ul {
+ display: flex;
+ gap: 30px;
+ list-style: none;
+ margin: 0;
+ padding: 10px 30px;
+ background: rgba(255, 255, 255, 0.03);
+ border-radius: 30px;
+ backdrop-filter: blur(10px);
+ border: 1px solid rgba(212, 175, 55, 0.2);
+ }
+
+ nav a {
+ color: var(--text-primary);
+ text-decoration: none;
+ font-weight: 700;
+ transition: 0.3s;
+ }
+
+ nav a:hover, nav a.active {
+ color: var(--gold-accent);
+ text-shadow: 0 0 10px var(--gold-glow);
+ }
+
+ header {
+ padding-top: 130px;
+ text-align: center;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 15px;
+ }
+
+ .brand-logo {
+ max-width: 120px;
+ height: auto;
+ display: block;
+ border-radius: 12px;
+ filter: drop-shadow(0 0 15px var(--gold-glow));
+ }
+
+ .hero-title {
+ font-size: 3rem;
+ font-weight: 900;
+ letter-spacing: 3px;
+ text-transform: uppercase;
+ background: linear-gradient(180deg, #ffffff 0%, #e6ca65 50%, #997a15 100%);
+ background-clip: text;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+ margin: 0;
+ }
+
+ .subtitle {
+ color: var(--text-secondary);
+ font-size: 1.1rem;
+ margin-top: -5px;
+ }
+
+ .container {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+ gap: 30px;
+ padding: 40px;
+ max-width: 1200px;
+ margin: 0 auto;
+ }
+
+ .car-card {
+ background: rgba(255, 255, 255, 0.02);
+ border-radius: 16px;
+ overflow: hidden;
+ border: 1px solid rgba(212, 175, 55, 0.2);
+ transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+ display: flex;
+ flex-direction: column;
+ }
+
+ .car-card:hover {
+ transform: translateY(-5px);
+ border-color: rgba(212, 175, 55, 0.6);
+ box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+ }
+
+ .car-image {
+ width: 100%;
+ height: 220px;
+ object-fit: cover;
+ }
+
+ .car-info {
+ padding: 25px;
+ display: flex;
+ flex-direction: column;
+ flex-grow: 1;
+ }
+
+ .car-info h2 {
+ font-size: 1.6rem;
+ color: #ffffff;
+ margin: 0 0 10px 0;
+ }
+
+ .car-info p {
+ color: var(--text-secondary);
+ font-size: 0.95rem;
+ line-height: 1.5;
+ margin: 0 0 20px 0;
+ flex-grow: 1;
+ }
+
+ .cta-btn {
+ align-self: flex-start;
+ padding: 10px 20px;
+ border-radius: 8px;
+ background: linear-gradient(135deg, #d4af37, #997a15);
+ color: #000000;
+ font-weight: bold;
+ text-decoration: none;
+ border: none;
+ cursor: pointer;
+ transition: background 0.3s;
+ }
+
+ .cta-btn:hover {
+ background: linear-gradient(135deg, #e6ca65, #b8a99a);
+ }
+ </style>
+ </head>
+ <body>
+ <nav>
+ <ul>
+ <li><a href="soonami.html">Home</a></li>
+ <li><a href="academy.html">Academy</a></li>
+ <li><a href="tech.html">Tech</a></li>
+ <li><a href="car.html" class="active">Garage</a></li>
+ </ul>
+ </nav>
+
+ <header>
+ <img src="images/logos/Soonami logo.jpg" alt="Soonami Empire Logo" class="brand-logo">
+ <h1 class="hero-title">Soonami Garage</h1>
+ <p class="subtitle">Select a vehicle to view details and book your test drive.</p>
+ </header>
+
+ <div class="container">
+ <div class="car-card">
+ <img src="images/cars/camry.jpg" alt="Toyota Camry" class="car-image">
+ <div class="car-info">
+ <h2>Toyota Camry</h2>
+ <p>The latest model Toyota Camry offers premium comfort, reliability, and modern styling, making it perfect for daily driving.</p>
+ <a href="book-ride.html?car=camry" class="cta-btn">Book Test Drive</a>
+ </div>
+ </div>
+
+ <div class="car-card">
+ <img src="images/cars/prado.jpg" alt="Toyota Prado" class="car-image">
+ <div class="car-info">
+ <h2>Toyota Prado</h2>
+ <p>A rugged yet refined SUV, the Toyota Prado is built for both city streets and tough local terrains with top-tier durability.</p>
+ <a href="book-ride.html?car=prado" class="cta-btn">Book Test Drive</a>
+ </div>
+ </div>
+
+ <div class="car-card">
+ <img src="images/cars/lexus.jpg" alt="Lexus LX 570" class="car-image">
+ <div class="car-info">
+ <h2>Lexus LX 570</h2>
+ <p>Experience ultimate luxury and power with the Lexus LX 570, featuring advanced technology and a commanding on-road presence.</p>
+ <a href="book-ride.html?car=lexus" class="cta-btn">Book Test Drive</a>
+ </div>
+ </div>
+ </div>
+ </body>
+</html>
