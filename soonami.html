@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <title>Soonami Empire</title>
+ <style>
+ @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap');
+
+ :root {
+ --gold-accent: #d4af37;
+ --gold-glow: rgba(212, 175, 55, 0.6);
+ --text-primary: #f3e5ab;
+ --text-secondary: #b8a99a;
+ }
+
+ body {
+ margin: 0;
+ padding: 0;
+ font-family: 'Outfit', sans-serif;
+ background: linear-gradient(135deg, #121418 0%, #1a1d24 50%, #222630 100%);
+ color: var(--text-primary);
+ min-height: 100vh;
+ }
+
+ nav {
+ padding: 20px;
+ display: flex;
+ justify-content: center;
+ background: rgba(18, 20, 24, 0.95);
+ position: fixed;
+ width: 100%;
+ top: 0;
+ z-index: 100;
+ border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+ }
+
+ nav ul {
+ display: flex;
+ gap: 30px;
+ list-style: none;
+ margin: 0;
+ padding: 10px 30px;
+ background: rgba(255, 255, 255, 0.03);
+ border-radius: 30px;
+ backdrop-filter: blur(10px);
+ border: 1px solid rgba(212, 175, 55, 0.2);
+ }
+
+ nav a {
+ color: var(--text-primary);
+ text-decoration: none;
+ font-weight: 700;
+ transition: 0.3s;
+ }
+
+ nav a:hover {
+ color: var(--gold-accent);
+ text-shadow: 0 0 10px var(--gold-glow);
+ }
+
+ header {
+ padding-top: 130px;
+ text-align: center;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 15px;
+ }
+
+ .brand-logo {
+ max-width: 160px;
+ height: auto;
+ display: block;
+ border-radius: 12px;
+ filter: drop-shadow(0 0 15px var(--gold-glow));
+ }
+
+ .hero-title {
+ font-size: 3.5rem;
+ font-weight: 900;
+ letter-spacing: 3px;
+ text-transform: uppercase;
+ background: linear-gradient(180deg, #ffffff 0%, #e6ca65 50%, #997a15 100%);
+ background-clip: text;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+ margin: 0;
+ }
+
+ .container {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 30px;
+ padding: 40px;
+ max-width: 1200px;
+ margin: 0 auto;
+ }
+
+ .section {
+ border-radius: 16px;
+ min-height: 380px;
+ display: flex;
+ align-items: flex-end;
+ padding: 25px;
+ position: relative;
+ overflow: hidden;
+ background-size: cover;
+ background-position: center;
+ border: 1px solid rgba(212, 175, 55, 0.2);
+ cursor: pointer;
+ text-decoration: none;
+ color: inherit;
+ transition: transform 0.3s, border-color 0.3s;
+ }
+
+ .section:hover {
+ transform: translateY(-5px);
+ border-color: rgba(212, 175, 55, 0.6);
+ }
+
+ .section::before {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background: linear-gradient(to top, rgba(18, 20, 24, 0.95), rgba(18, 20, 24, 0.3));
+ z-index: 1;
+ }
+
+ .content {
+ position: relative;
+ z-index: 2;
+ }
+
+ h2 {
+ font-size: 1.8rem;
+ color: #ffffff;
+ margin-bottom: 8px;
+ }
+
+ p {
+ color: var(--text-secondary);
+ font-size: 0.95rem;
+ margin: 0;
+ }
+
+ #tech { 
+ background-image: url('images/tech/gadgets.jpg'); 
+ }
+ 
+ #market { 
+ background-image: url('images/market/chart.jpg'); 
+ }
+ 
+ #cars { 
+ background-image: url('images/cars/car.jpg'); 
+ }
+ </style>
+ </head>
+ <body>
+ <nav>
+ <ul>
+ <li><a href="soonami.html">Home</a></li>
+ <li><a href="academy.html">Academy</a></li>
+ <li><a href="tech.html">Tech</a></li>
+ <li><a href="cars.html">Garage</a></li>
+ </ul>
+ </nav>
+
+ <header>
+ <!-- Exact path from your folder: images/logos/Soonami logo.jpg -->
+ <img src="images/logos/Soonami logo.jpg" alt="Soonami Empire Logo" class="brand-logo">
+ <h1 class="hero-title">Soonami Empire</h1>
+ </header>
+
+ <div class="container">
+ <a href="tech-products.html" class="section" id="tech">
+ <div class="content">
+ <h2>Cutting-Edge Tech</h2>
+ <p>Innovations defining the digital space.</p>
+ </div>
+ </a>
+
+ <a href="market-analysis.html" class="section" id="market">
+ <div class="content">
+ <h2>Market Analysis</h2>
+ <p>Smart money concepts & liquidity strategies.</p>
+ </div>
+ </a>
+
+ <a href="car-fleet.html" class="section" id="cars">
+ <div class="content">
+ <h2>The Garage</h2>
+ <p>Luxury and performance vehicles.</p>
+ </div>
+ </a>
+ </div>
+ </body>
+</html>
